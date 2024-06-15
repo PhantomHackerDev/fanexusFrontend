@@ -1,0 +1,101 @@
+{
+  "name": "fanexus",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint --fix --max-warnings=0",
+    "start": "git pull && git merge origin/dev && npm run serve",
+    "test": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+
+    "axios": "^0.19.2",
+    "core-js": "^3.4.4",
+    "linkifyjs": "^2.1.9",
+    "register-service-worker": "^1.7.1",
+    "sanitize-html": "^2.0.0",
+    "socket.io-client": "^2.3.1",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
+    "vue-confirm-dialog": "^1.0.2",
+    "vue-date-dropdown": "^1.0.5",
+    "vue-router": "^3.1.3",
+    "vue-socket.io": "^3.0.10",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-pwa": "^4.5.8",
+    "@vue/cli-plugin-unit-jest": "^4.5.7",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vue/test-utils": "^1.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^26.5.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "eslint-plugin-vue-scoped-css": "^0.4.0",
+    "husky": "^4.2.5",
+    "jest": "^26.5.3",
+    "jest-serializer-vue": "^2.0.2",
+    "lint-staged": "^10.2.2",
+    "node-sass": "^4.14.1",
+    "prettier": "^1.19.1",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.0",
+    "style-resources-loader": "^1.3.2",
+    "vue-cli-plugin-style-resources-loader": "^0.1.4",
+    "vue-click-outside": "^1.0.7",
+    "vue-jest": "^3.0.7",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      ".*\\.(js)$": "babel-jest",
+      ".*\\.(png)$": "<rootDir>/fileTransform"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^~api$": "<rootDir>/src/services/api.service",
+      "^~common/(.*)$": "<rootDir>/src/components/common/$1",
+      "^~fields/(.*)$": "<rootDir>/src/components/common/Fields/$1",
+      "^~svg/(.*)$": "<rootDir>/fileMock"
+    },
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "**/*.{js,vue}",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "html",
+      "text-summary"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|vue)": [
+      "npm run lint",
+      "prettier --write"
+    ]
+  }
+}
