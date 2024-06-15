@@ -1,0 +1,169 @@
+:root {
+  /* common colors */
+  --popup-overlay: rgba(0, 0, 0, 0.6);
+  --box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  --box-shadow-alias: 0 0 5px rgba(0, 0, 0, 0.3);
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-main-500: #b4a6ca;
+  --color-main-600: #a98adc;
+  --color-main-700: #7744cb;
+  --color-main-800: #43217b;
+  --color-main-900: #190933;
+  --text-date-and-time: #746b84;
+  --text-create-account-active: var(--color-main-700);
+  --text-create-account-inactive: #b9b4c1;
+  --tab-normal: #b8b4c0;
+  --tab-active: var(--color-main-700);
+  --checkbox-normal: #e0d5f1;
+  --checkbox-active: var(--color-main-700);
+  --border-tag: var(--color-main-500);
+  --original-post-name-bg: #302049;
+  --success: var(--border-success);
+
+  /* common colors end */
+
+  --error: #e01616;
+  --BG-primary-opacity: rgba(247, 247, 247, 0.8);
+  --BG-primary-opacity-hover: rgba(247, 247, 247, 0.9);
+  --BG-primary: #f7f7f7;
+  --BG-create-post-modal: var(--BG-primary);
+  --BG-create-post-modal-body: var(--color-white);
+  --BG-post: #24133e;
+  --BG-repost: #f3f2f4;
+  --BG-create-post-modal: var(--BG-primary);
+  --BG-create-post-modal-body: var(--color-white);
+  --BG-dropdown: var(--color-white);
+  --BG-navbar: var(--color-main-800);
+  --BG-button-primary: var(--color-white);
+  --BG-button-primary-hover: var(--checkbox-normal);
+  --BG-button-secondary: var(--color-main-800);
+  --BG-button-secondary-hover: var(--color-main-700);
+  --BG-button-secondary-disabled: var(--tab-normal);
+  --BG-button-comment: var(--color-main-900);
+  --BG-blog-post: var(--color-white);
+  --BG-expand: rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.75) 50%,
+      rgba(255, 255, 255, 0.5) 100%;
+  --BG-input: var(--color-white);
+  --BG-modal-window: var(--color-white);
+  --BG-button-inactive: #c7c4cd;
+  --BG-aside-togglable: var(--color-main-700);
+  --BG-button-pagination-active: var(--color-main-700);
+  --BG-button-aside: var(--checkbox-normal);
+  --BG-button-square: var(--color-main-800);
+  --BG-button-dropdown: #F8F8F9;
+  --text-primary: var(--color-main-900);
+  --text-secondary: var(--color-main-700);
+  --text-activity-name-inactive: var(--text-create-account-inactive);
+  --text-activity-name-active: var(--color-main-700);
+  --text-input: var(--color-main-900);
+  --text-input-placeholder: var(--tab-normal);
+  --text-button-login-hover: var(--checkbox-normal);
+  --text-button: var(--color-main-800);
+  --text-button-hover: var(--color-main-700);
+  --text-button-primary: var(--color-main-800);
+  --text-button-primary-hover: var(--color-main-700);
+  --text-button-secondary: var(--color-white);
+  --text-button-comment: var(--color-white);
+  --text-button-comments-show: var(--color-main-900);
+  --text-title-secondary: #b8b4c0;
+  --divider-in-popup: #f3f2f4;
+  --dropdown-divider: #f2f1f3;
+  --dropdown-arrow: #746b84;
+  --button-disabled: var(--tab-normal);
+
+  --border-group-normal: var(--checkbox-normal);
+  --border-button-normal: var(--color-white);
+  --border-button-hover: var(--checkbox-normal);
+  --border-input-normal: var(--color-main-500);
+  --border-input-hover: var(--color-main-900);
+  --border-input-active: var(--color-main-700);
+  --border-input-comment-normal: var(--color-main-900);
+  --border-active: var(--color-main-700);
+  --border-button-secondary: var(--color-main-800);
+  --border-button-secondary-hover: var(--color-main-700);
+  --border-button-secondary-disabled: var(--tab-normal);
+  --border-input-error: #e01616;
+  --border-success: #169016;
+  --border-button-disabled: var(--tab-normal);
+  --border-button-tools: var(--color-main-800);
+  --popular-blog-divider: #d8d5e0;
+  --border-button-select: var(--color-main-800);
+  --border-input-search: var(--color-white);
+  --border-block: rgba(67, 33, 123, 0.1);
+
+  --BG-select-options: var(--color-white);
+  --common-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  --activity-divider: rgba(228, 228, 255, 1);
+  --activity-hover: rgba(235, 235, 255, 1);
+
+  &.theme-dark {
+    --error: #de5e5e;
+    --BG-primary-opacity: rgba(25, 9, 51, 0.8);
+    --BG-primary-opacity-hover: rgba(25, 9, 51, 0.9);
+    --BG-primary: var(--color-main-900);
+    --BG-create-post-modal: var(--original-post-name-bg);
+    --BG-create-post-modal-body: var(--color-main-900);
+    --BG-post: var(--checkbox-normal);
+    --BG-create-post-modal: var(--original-post-name-bg);
+    --BG-create-post-modal-body: var(--color-main-900);
+    --BG-repost: var(--original-post-name-bg);
+    --BG-dropdown: var(--original-post-name-bg);
+    --BG-navbar: var(--original-post-name-bg);
+    --BG-button-comment: var(--color-white);
+    --BG-button-secondary: var(--color-white);
+    --BG-button-secondary-hover: var(--checkbox-normal);
+    --BG-button-secondary-disabled: var(--button-disabled);
+    --BG-blog-post: #24133e;
+    --BG-expand: rgba(36, 19, 62, 1) 0%,
+      rgba(36, 19, 62, 0.75) 50%,
+      rgba(36, 19, 62, 0.5) 100%;
+    --BG-input: var(--color-main-900);
+    --BG-modal-window: var(--original-post-name-bg);
+    --BG-aside-togglable: #24133e;
+    --BG-button-pagination-active: var(--color-main-600);
+    --BG-button-square: var(--color-main-900);
+    --BG-button-dropdown: #3B2B52;
+    --text-primary: var(--color-white);
+    --text-secondary: var(--color-main-600);
+    --text-activity-name-inactive: var(--tab-normal);
+    --text-activity-name-active: var(--color-white);
+    --text-input: var(--color-main-500);
+    --text-input-placeholder: var(--color-main-500);
+    --text-button: var(--color-white);
+    --text-button-hover: var(--checkbox-normal);
+    --text-button-primary: var(--color-main-700);
+    --text-button-primary-hover: var(--color-main-900);
+    --text-button-secondary: var(--color-main-700);
+    --text-button-comment: var(--color-main-900);
+    --text-button-comments-show: var(--color-main-600);
+    --text-title-secondary: var(--color-white);
+    --divider-in-popup: rgba(255, 255, 255, 0.05);
+    --dropdown-divider: #3b2b52;
+    --dropdown-arrow: var(--color-main-500);
+    --button-disabled: #5e5371;
+
+    --border-group-normal: var(--color-white);
+    --border-input-hover: var(--checkbox-normal);
+    --border-input-active: var(--color-white);
+    --border-input-comment-normal: var(--color-main-500);
+    --border-button-tools: var(--color-white);
+    --border-button-secondary: var(--color-white);
+    --border-button-secondary-hover: var(--checkbox-normal);
+    --border-button-secondary-disabled: var(--button-disabled);
+    --border-active: var(--color-main-600);
+    --border-button-disabled: #5e5371;
+    --popular-blog-divider: var(--original-post-name-bg);
+    --border-button-select: var(--color-white);
+    --border-input-search: var(--color-main-500);
+    --border-block: rgba(255, 255, 255, 0.05);
+
+    --BG-select-options: var(--original-post-name-bg);
+
+    --common-box-shadow: var(--box-shadow);
+
+    --activity-divider: rgba(55, 10, 85, 1);
+    --activity-hover: rgba(45, 0, 70, 1);
+  }
+}

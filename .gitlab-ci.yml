@@ -1,0 +1,57 @@
+stages:  
+   - build  
+   - deploy
+
+build dev:  
+   image: node:10.15.0-stretch  
+   stage: build
+   only: 
+      - dev
+   script:    
+      # Install vuecli    
+      - npm install -g @vue/cli@latest    
+      # Install dependencies    
+      - npm install    
+      # Build App    
+      - npm run build  
+   artifacts:    
+      paths:      
+         # Build folder      
+         - dist/    
+      expire_in: 1 hour
+
+deploy dev:  
+   image: python:latest  
+   stage: deploy 
+   only: 
+      - dev
+   script:    
+      - pip install awscli    
+      - aws s3 sync ./dist s3://dev-fanexus-frontend
+
+build beta:  
+   image: node:10.15.0-stretch  
+   stage: build
+   only: 
+      - beta
+   script:    
+      # Install vuecli    
+      - npm install -g @vue/cli@latest    
+      # Install dependencies    
+      - npm install    
+      # Build App    
+      - npm run build  
+   artifacts:    
+      paths:      
+         # Build folder      
+         - dist/    
+      expire_in: 1 hour
+
+deploy beta:  
+   image: python:latest  
+   stage: deploy 
+   only: 
+      - beta
+   script:    
+      - pip install awscli    
+      - aws s3 sync ./dist s3://beta.fanexus.net

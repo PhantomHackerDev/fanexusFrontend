@@ -1,0 +1,69 @@
+@import './mixins';
+:root {
+  // paddings
+  --element-padding-xxl: 50px;
+  --element-padding-xl: 30px;
+  --element-padding-l: 20px;
+  --element-padding-m: 15px;
+  --button-padding-m: 12px;
+  --element-padding-s: 10px;
+  --button-padding-s: 8px;
+  --element-padding-xs: 5px;
+
+  // margins
+  --element-margin-xxl: 50px;
+  --element-margin-xl: 30px;
+  --element-margin-l: 20px;
+  --element-margin-m: 15px;
+  --element-margin-s: 10px;
+  --element-margin-xs: 5px;
+
+  // sizes
+  --size-small: 11px;
+  --size-button: 12px;
+  --size-regular: 14px;
+  --size-activity: 16px;
+  --size-title: 18px;
+  --size-primary: 24px;
+  --width-very-small: 120px;
+  --width-small: 200px;
+  --width-medium-small: 250px;
+  --width-medium: 580px;
+  --width-large: 780px;
+  --width-aside: 60px;
+  --wallpaper-height: 300px;
+  --comment-h1:28px;
+  --comment-h2:21px;
+
+  // borders
+  --border-radius: 5px;
+  --border-width-default: 2px;
+  --border-width-thin: 1px;
+  --border-width-avatar: 3px;
+  --border-width-thick: 10px;
+
+  // transitions
+  --transition-default: 0.3s;
+
+  // z-indexes
+  --z-index-1: 1;
+  --z-index-popup: 2;
+  --z-index-popup-overlay: 3;
+
+  // opacity
+  --opacity-image-overlay: 0.6;
+
+  @include tablet {
+    --element-margin-xl: 15px;
+    --width-medium-small: 100px;
+  }
+
+  @include mobile {
+    --wallpaper-height: 150px;
+    --element-padding-xl: 15px;
+  }
+
+  @include mobile-s {
+    --element-padding-l: 10px;
+  }
+}

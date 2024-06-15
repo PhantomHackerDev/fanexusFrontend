@@ -1,0 +1,64 @@
+@import './_mixins.scss';
+
+body {
+  font-family: 'OpenSans-Regular', sans-serif;
+  color: var(--BG-primary);
+  /*@TODO test*/
+  overflow: hidden;
+
+  @include mobile {
+    overflow: visible;
+  }
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// layout
+.wrapper {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--BG-primary);
+  grid-template-areas:
+    'header header'
+    'content content'
+    'content content'
+    'footer footer';
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  @include mobile {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  &.logged {
+    grid-template-areas:
+      'aside header header'
+      'aside content content'
+      'aside content content'
+      'aside footer footer';
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-columns: min-content minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+// transitions
+.fade {
+  &-enter-active,
+  &-leave-active {
+    transition: var(--transition-default);
+    transform: translateY(0);
+  }
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
