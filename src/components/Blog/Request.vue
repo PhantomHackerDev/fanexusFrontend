@@ -46,7 +46,6 @@
 <script>
 import { isValidDate } from '@/filters/date.filter';
 import AuthorTitle from '~common/AuthorTitle';
-// import Avatar from '~common/Avatar';
 import DotsButton from '~common/Buttons/DotsButton';
 import FormButton from '~common/Buttons/FormButton';
 
